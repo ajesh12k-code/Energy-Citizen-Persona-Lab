@@ -1,0 +1,301 @@
+{
+  "version": "1.1.0",
+  "source_doi": "10.5281/zenodo.10078752",
+  "cv_accuracy": 0.8823,
+  "features": [
+    "c11__1",
+    "c46__1",
+    "c11__2",
+    "c11__3",
+    "c28__2",
+    "c15__3",
+    "c14__2",
+    "c14__1",
+    "c14__10",
+    "c14__3",
+    "c14__7",
+    "c45__4"
+  ],
+  "questions": [
+    {
+      "id": "c11__1",
+      "text": "Understanding my monthly electricity consumption - How complex do you find (1 = not very complex, 7 = extremely complex)...",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c46__1",
+      "text": "I save energy in my everyday life - When you think of your personal contribution to the energy transition, do you perform the following activities?",
+      "options": {
+        "1": "Yes",
+        "2": "No",
+        "3": "Planning to do",
+        "4": "Stopped doing"
+      }
+    },
+    {
+      "id": "c11__2",
+      "text": "Understanding my monthly heating and/or cooling consumption - How complex do you find (1 = not very complex, 7 = extremely complex)...",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c11__3",
+      "text": "Knowing how much I spend in energy - How complex do you find (1 = not very complex, 7 = extremely complex)...",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c28__2",
+      "text": "How often did you have a supplier threaten you to disconnect your electricity or home heating fuel service, or discontinue making fuel deliveries? - Please answer the following questions:",
+      "options": {
+        "1": "Never",
+        "2": "In 1 or 2 months in the last year",
+        "3": "Some months in the last year",
+        "4": "Almost every month in the last year"
+      }
+    },
+    {
+      "id": "c15__3",
+      "text": "Climate change is a vital issue that must be addressed - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c14__2",
+      "text": "I\u2019m too busy to be concerned with my energy usage - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c14__1",
+      "text": "Energy efficiency and conservation isn\u2019t that important to me - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c14__10",
+      "text": "I have a moral obligation to reduce my energy usage - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c14__3",
+      "text": "It would be too much of an inconvenience to my lifestyle to reduce my energy usage - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c14__7",
+      "text": "I am not willing to conserve energy at home if that comes at any cost to my comfort - Please indicate the degree to which you disagree or agree with the following statements.",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    },
+    {
+      "id": "c45__4",
+      "text": "The energy transition is a joint task in which everyone in society, including me, should make a contribution - When you think of your personal contribution to the energy transition, to what extent do you agree with the following statements?",
+      "options": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7"
+      }
+    }
+  ],
+  "scaler_mean": [
+    3.862014,
+    1.170703,
+    3.955067,
+    3.77969,
+    1.303484,
+    5.493733,
+    2.99129,
+    2.967283,
+    5.071277,
+    3.214786,
+    3.27576,
+    4.997769
+  ],
+  "scaler_scale": [
+    1.968084,
+    0.541724,
+    1.870914,
+    1.9505,
+    0.712416,
+    1.564936,
+    1.811293,
+    1.919506,
+    1.640236,
+    1.788287,
+    1.816003,
+    1.531448
+  ],
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "coef": [
+    [
+      1.064545,
+      -0.905724,
+      1.078069,
+      0.782829,
+      -0.949105,
+      1.336891,
+      -1.299454,
+      -1.191408,
+      0.631011,
+      -0.985729,
+      -1.192338,
+      0.65378
+    ],
+    [
+      -0.66966,
+      -0.34327,
+      -0.421351,
+      -0.321336,
+      -0.266424,
+      -1.513253,
+      0.082206,
+      0.189466,
+      -1.460016,
+      0.133615,
+      0.155387,
+      -1.270198
+    ],
+    [
+      0.769305,
+      -0.896429,
+      0.633595,
+      0.549211,
+      -0.551033,
+      -0.277533,
+      1.087703,
+      1.051047,
+      0.219306,
+      0.929984,
+      0.950201,
+      -0.000606
+    ],
+    [
+      0.983157,
+      -0.166748,
+      0.448422,
+      0.850854,
+      2.64406,
+      -0.347666,
+      0.862416,
+      0.755879,
+      0.012755,
+      0.894018,
+      0.758022,
+      0.131382
+    ],
+    [
+      -0.18581,
+      3.165997,
+      -0.093912,
+      0.10184,
+      0.340401,
+      -0.459534,
+      0.331828,
+      0.086749,
+      -0.214523,
+      0.191337,
+      0.428924,
+      -0.543927
+    ],
+    [
+      -1.961537,
+      -0.853825,
+      -1.644823,
+      -1.963398,
+      -1.217899,
+      1.261094,
+      -1.064699,
+      -0.891733,
+      0.811468,
+      -1.163225,
+      -1.100197,
+      1.02957
+    ]
+  ],
+  "intercept": [
+    0.671631,
+    1.8971,
+    0.904045,
+    -1.087929,
+    -1.490575,
+    -0.894272
+  ]
+}
