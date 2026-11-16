@@ -4,6 +4,7 @@ import { CountryBaselines, PersonaModel, PredictionResult } from '../types/perso
 import { PERSONA_GUIDELINES } from '../data/personaGuidelines';
 import { GLOBAL_COUNTRIES, resolveCountryBaseline } from '../data/globalCountries';
 import { predictPersona } from '../utils/predictPersona';
+import { formatSurveyQuestion } from '../utils/formatQuestion';
 import { LeadForm } from './LeadForm';
 
 interface Props {
@@ -67,28 +68,41 @@ export function CitizenQuiz({ model, baselines }: Props) {
         ) : (
           <div className="space-y-5">
             {model.questions.map((q, idx) => {
-              const [prompt, hint] = q.text.split(' - ');
+              const formatted = formatSurveyQuestion(q.id, q.text);
               return (
-                <div key={q.id} className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2.5">
+                <div key={q.id} className="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2.5">
                   <div className="text-xs font-bold text-slate-400 uppercase">Question {idx + 1}</div>
-                  <p className="font-medium text-slate-900">{prompt}</p>
-                  {hint && <p className="text-xs text-slate-500">{hint}</p>}
+                  {formatted.instruction && (
+                    <p className="text-xs font-medium text-slate-500">{formatted.instruction}</p>
+                  )}
+                  <p className="font-semibold text-slate-900 text-base">{formatted.statement}</p>
+
+                  {formatted.isNumericScale && (
+                    <div className="flex justify-between text-xs font-medium text-slate-500 pt-1 max-w-md">
+                      <span>{formatted.lowAnchor}</span>
+                      <span>{formatted.highAnchor}</span>
+                    </div>
+                  )}
+
                   <div className="flex flex-wrap gap-2 pt-1">
                     {Object.entries(q.options).map(([valStr, label]) => {
                       const val = Number(valStr);
                       const active = answers[idx] === val;
+                      const buttonText = formatted.isNumericScale ? `${val}` : `${val}. ${label}`;
                       return (
                         <button
                           key={valStr}
                           type="button"
                           onClick={() => setAnswers((prev) => ({ ...prev, [idx]: val }))}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
+                          className={`${
+                            formatted.isNumericScale ? 'w-10 h-10 justify-center' : 'px-3.5 py-2'
+                          } inline-flex items-center rounded-lg text-xs font-semibold border transition ${
                             active
-                              ? 'bg-emerald-600 text-white border-emerald-600'
+                              ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
                               : 'bg-white text-slate-700 border-slate-300 hover:border-emerald-400'
                           }`}
                         >
-                          {val}. {label}
+                          {buttonText}
                         </button>
                       );
                     })}
